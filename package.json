@@ -1,0 +1,19 @@
+{
+  "name": "tarot-deck",
+  "version": "1.0.0",
+  "description": "tarot",
+  "main": "index.js",
+  "dependencies": {
+    "corpora": "https://github.com/dariusk/corpora/archive/master.tar.gz",
+    "tape": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "keywords": [
+    "tarot"
+  ],
+  "author": "byronhulcher",
+  "license": "ISC"
+}
