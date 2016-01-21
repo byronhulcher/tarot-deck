@@ -1,6 +1,6 @@
 {
   "name": "tarot-deck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tarot",
   "main": "index.js",
   "dependencies": {
