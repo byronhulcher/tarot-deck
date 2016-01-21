@@ -1,4 +1,4 @@
-# tarot-deck
+# [tarot-deck](https://github.com/byronhulcher/tarot-deck)
 
 Tarot for Node! A thin javascript wrapper for the Tarot Interpretations from github.com/dariusk/corpora
 
