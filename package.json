@@ -1,7 +1,7 @@
 {
   "name": "tarot-deck",
   "version": "1.0.2",
-  "description": "tarot",
+  "description": "Tarot for Node!",
   "main": "index.js",
   "dependencies": {
     "corpora": "https://github.com/dariusk/corpora/archive/master.tar.gz",
