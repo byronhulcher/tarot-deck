@@ -7,7 +7,8 @@
     "preversion": "npm run clean && npm run build",
     "build": "babel src --out-dir dist",
     "clean": "rimraf dist",
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "lint": "eslint src"
   },
   "dependencies": {
     "corpora": "https://github.com/dariusk/corpora/archive/master.tar.gz"
@@ -15,12 +16,14 @@
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
+    "babel-eslint": "^5.0.0",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-transform-runtime": "^6.4.3",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
+    "eslint": "~2.2",
     "tape": "^4.4.0"
   },
   "babel": {
@@ -32,6 +35,16 @@
       "transform-runtime",
       "add-module-exports"
     ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    }
   },
   "keywords": [
     "tarot"
