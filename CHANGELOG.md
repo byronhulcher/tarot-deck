@@ -1,5 +1,11 @@
 ## Change Log
 
+### v1.1.2 (2016/03/09 21:13 +00:00)
+- [3252b75](https://github.com/byronhulcher/tarot-deck/commit/3252b75d7a8639196d588e4b7e33153114f58252) 1.1.2 (@byronhulcher)
+- [94c8422](https://github.com/byronhulcher/tarot-deck/commit/94c8422277c112b583b76beb227ede987d2f4d6d) Fixed source file after linting (@byronhulcher)
+- [19c9337](https://github.com/byronhulcher/tarot-deck/commit/19c933730e90f5aad63e3c6ed885e352fc7c5d37) Better linting support (@byronhulcher)
+- [8a8736e](https://github.com/byronhulcher/tarot-deck/commit/8a8736e5cc3521ae741c5bb4ad4c98f40649f0e6) Automatic updating of CHANGELOG.md (@byronhulcher)
+
 ### v1.1.1 (2016/03/09 20:24 +00:00)
 - [7cc3af3](https://github.com/byronhulcher/tarot-deck/commit/7cc3af36a828048e2a97ec29f210c0d907011cd0) 1.1.1 (@byronhulcher)
 - [c21616f](https://github.com/byronhulcher/tarot-deck/commit/c21616fb553a5cc6f8a331d656909c34b6ac99ed) Fix README.MD (@byronhulcher)
