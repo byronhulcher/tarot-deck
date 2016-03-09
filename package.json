@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "scripts": {
     "preversion": "npm run clean && npm run build",
-    "postversion": "npm run changelog",
     "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
     "test": "npm run preversion && npm run lint && node tests.js",
