@@ -5,10 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "preversion": "npm run clean && npm run build",
+    "postversion": "npm run changelog",
     "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
     "test": "npm run preversion && node tests.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
     "array-range": "^1.0.1",
@@ -25,6 +27,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
     "eslint": "~2.2",
+    "github-changes": "^1.0.2",
     "tape": "^4.4.0"
   },
   "babel": {
