@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "preversion": "npm run clean && npm run build",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
-    "test": "node tests.js",
+    "test": "npm run preversion && node tests.js",
     "lint": "eslint src"
   },
   "dependencies": {
