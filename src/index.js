@@ -1,5 +1,6 @@
-const tarot = require('corpora/data/divination/tarot_interpretations.json');
-
+const tarot = require('corpora/data/divination/tarot_interpretations.json'),
+  array = require('array-range');
+  
 function uniquePluck(arr, prop) {
   var types = {};
 
@@ -40,3 +41,20 @@ export const suits = getSuits();
 export const minorArcana = getMinorArcana();
 
 export const majorArcana = getMajorArcana();
+
+export function drawCard(deck = tarotDeck){
+  if (deck.length <= 0) return;
+  let chosenCard = deck[Math.floor(Math.random() * deck.length)];
+  chosenCard.reversed = Math.random()<.5;
+  return chosenCard;
+};
+
+export function drawReading(numberOfCards = 3, originalDeck = tarotDeck){
+  const deck = originalDeck.slice();
+  
+  return array(numberOfCards).map( () => {
+    let card = drawCard(deck);
+    deck.splice(deck.indexOf(card), 1);
+    return card;
+  });
+}
