@@ -1,5 +1,4 @@
-const tarot = require('corpora/data/divination/tarot_interpretations.json'),
-  tarotDeck = tarot.tarot_interpretations;
+const tarot = require('corpora/data/divination/tarot_interpretations.json');
 
 function uniquePluck(arr, prop) {
   var types = {};
@@ -26,20 +25,18 @@ function getSuits() {
   return uniquePluck(tarotDeck, 'suit');
 };
 
-function getBySuit(suit) {
+export const tarotDeck = tarot.tarot_interpretations;
+
+export function getBySuit(suit) {
   return tarotDeck.filter( (element) => {return element.suit === suit;} );
 };
 
-function getByRank(rank) {
+export function getByRank(rank) {
   return tarotDeck.find( (element) => {return element.rank == rank;} );
 };
 
-module.exports = {
-  tarotDeck,
-  getBySuit,
-  getByRank,
-  suits: getSuits(),
-  minorArcana: getMinorArcana(),
-  majorArcana: getMajorArcana(),
+export const suits = getSuits();
 
-};
+export const minorArcana = getMinorArcana();
+
+export const majorArcana = getMajorArcana();
