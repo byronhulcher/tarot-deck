@@ -8,7 +8,7 @@
     "postversion": "npm run changelog",
     "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
-    "test": "npm run preversion && node tests.js",
+    "test": "npm run preversion && npm run lint && node tests.js",
     "lint": "eslint src",
     "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
@@ -26,7 +26,7 @@
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
-    "eslint": "~2.2",
+    "eslint": "^1.1.0",
     "github-changes": "^1.0.2",
     "tape": "^4.4.0"
   },
@@ -39,16 +39,6 @@
       "transform-runtime",
       "add-module-exports"
     ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "env": {
-      "node": true,
-      "es6": true
-    },
-    "ecmaFeatures": {
-      "modules": true
-    }
   },
   "keywords": [
     "tarot"

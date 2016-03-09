@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "commonjs": true,
@@ -70,10 +71,9 @@
     "no-trailing-spaces": 2,
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 1,
-    "one-var": 2,
+    "one-var": 0,
     "quotes": [2, "single", "avoid-escape"],
     "semi": [2, "always"],
-    "keyword-spacing": 2,
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
     "space-infix-ops": [1, {"int32Hint": false}],
