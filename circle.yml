@@ -1,3 +1,6 @@
 machine:
   node:
     version: 5.7.1
+dependencies:
+  pre:
+    - rm -rf node_modules
