@@ -39,8 +39,58 @@ console.log( tarot.getByRank(1) );
   rank: 1,
   suit: 'major' }
 */
-```
 
+console.log( tarot.drawCard() );
+/*
+{ keywords: [ 'health', 'wealth', 'practicality', 'receiving' ],
+  meanings: 
+   { light: 
+      [ 'Outlining a plan for achieving prosperity',
+        'Becoming aware of opportunities to improve income or health',
+        'Realizing you have everything you need',
+        'Appreciating everything the Universe has given you',
+        'Receiving the perfect gift at the perfect time' ],
+     shadow: 
+      [ 'Indulging in relentless consumerism',
+        'Wanting more, no matter how much you have',
+        'Obsessing on your account balance',
+        'Suffering from hypochondria',
+        'Consuming blessings without expressing gratitude',
+        'Taking what you want without concern for the needs of others' ] },
+  name: 'ace of coins',
+  rank: 1,
+  suit: 'coins',
+  reversed: true }
+*/
+
+console.log( tarot.drawReading() );
+/*
+[ { keywords: [ 'training', 'discipline', 'confidence', 'enough' ],
+    meanings: { light: [Object], shadow: [Object] },
+    name: 'nine of coins',
+    rank: 9,
+    suit: 'coins',
+    reversed: true },
+  { keywords: 
+     [ 'wholeness',
+       'integration',
+       'totality',
+       'completeness',
+       'fullness' ],
+    meanings: { light: [Object], shadow: [Object] },
+    name: 'The World',
+    rank: 21,
+    suit: 'major',
+    reversed: true },
+  { keywords: [ 'implementation', 'action', 'exploration' ],
+    meanings: { light: [Object], shadow: [Object] },
+    name: 'three of wands',
+    rank: 3,
+    suit: 'wands',
+    reversed: false } ]
+*/
+
+```
 # exports
 ### tarotDeck
 An array of objects representing tarot cards.  See above for an example of the fields these objects will contain.
@@ -59,3 +109,11 @@ Function that returns an array of objects representing tarot cards which match t
 
 ### function getByRank( integer or string )
 Function that returns a single object representing a tarot card which matches the provided rank.  The rank should be an integer or evaluate to an integer.  See above for an example of the fields this will contain.
+
+### function drawCard( array deck = tarotDeck )
+Will choose a random card from the the provided array of tarot cards.  If the `deck` argument is not provided then it will default to the the exported `tarotDeck`.
+This will also add a `reversed` field to the object, which is a boolean of whether the card was drawn reversed or not.
+
+### function drawCard( integter numberOfCards = 3, array deck = tarotDeck)
+Will draw up to `numberOfCards` from the the supplied `deck` argument and return them as an array.  If the `deck` argument is not provided then it will default to the the exported `tarotDeck`.
+These cards are not replaced in the deck after they are drawn, so all cards are guarunteed unique.  They will also include the `reversed` field.
