@@ -34,11 +34,17 @@ test('Draw a single card', function(t){
 });
 
 test('Drawing a tarot reading', function(t){
-    t.plan(3);
+    t.plan(4);
     t.assert(tarot.drawReading().length === 3, "Readings default to 3 cards ");
     
     var fullReading = tarot.drawReading(tarot.tarotDeck.length);
     var uniqueReading = [ ...new Set(fullReading) ];
     t.assert(fullReading.length === uniqueReading.length , "All cards drawn in a reading are unique");
-    t.assert(tarot.drawReading(tarot.tarotDeck.length + 1).length === tarot.tarotDeck.length, "Drawing more cards than are in a deck results in a return equal to deck size")
+    t.assert(tarot.drawReading(tarot.tarotDeck.length + 1).length === tarot.tarotDeck.length, "Drawing more cards than are in a deck results in a return equal to deck size");
+    
+    var tarotDeckCopy = tarot.tarotDeck.slice();
+    var cardsDrawnFromCopy = tarot.drawReading(3, tarotDeckCopy);
+    var areCardsRemovedAfterDrawing = cardsDrawnFromCopy.reduce((previousValue, currentValue) => { return previousValue * (tarotDeckCopy.indexOf(currentValue) != -1 )  }, true);
+    
+    t.assert(areCardsRemovedAfterDrawing, "Drawing a reading does not modify a deck provided as an argument");
 });

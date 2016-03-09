@@ -117,3 +117,4 @@ This will also add a `reversed` field to the object, which is a boolean of wheth
 ### function drawCard( integter numberOfCards = 3, array deck = tarotDeck)
 Will draw up to `numberOfCards` from the the supplied `deck` argument and return them as an array.  If the `deck` argument is not provided then it will default to the the exported `tarotDeck`.
 These cards are not replaced in the deck after they are drawn, so all cards are guarunteed unique.  They will also include the `reversed` field.
+The provided `deck` argument or its default are NOT modified in any way. Cards returned from this function will still exist in the `deck`.
