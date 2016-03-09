@@ -28,6 +28,7 @@
     "babel-register": "^6.4.3",
     "eslint": "^1.1.0",
     "github-changes": "^1.0.2",
+    "rimraf": "^2.5.2",
     "tape": "^4.4.0"
   },
   "babel": {
