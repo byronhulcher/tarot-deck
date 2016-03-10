@@ -32,16 +32,6 @@
     "rimraf": "^2.5.2",
     "tape": "^4.4.0"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-runtime",
-      "add-module-exports"
-    ]
-  },
   "keywords": [
     "tarot"
   ],
