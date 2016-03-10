@@ -4,3 +4,8 @@ machine:
 dependencies:
   pre:
     - rm -rf node_modules
+    - npm install -g istanbul
+    - npm install -g codeclimate-test-reporter
+  post:
+    - istanbul cover tests.js
+    - codeclimate-test-reporter < ./coverage/lcov.info
