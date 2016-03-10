@@ -8,5 +8,4 @@ dependencies:
     - npm install -g codeclimate-test-reporter
 test:
   post:
-    - istanbul cover tests.js
-    - codeclimate-test-reporter < ./coverage/lcov.info
+    - istanbul cover tests.js && codeclimate-test-reporter < ./coverage/lcov.info
