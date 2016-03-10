@@ -1,6 +1,6 @@
 var test = require('tape');
 
-var tarot = require('../tarot-deck');
+var tarot = require('../tarot-deck/src/index.js');
 
 test('Tarot Deck', function (t) {
   t.plan(2);

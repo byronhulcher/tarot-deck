@@ -7,7 +7,7 @@
     "preversion": "npm run clean && npm run build",
     "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
-    "test": "npm run lint && npm run preversion && node tests.js",
+    "test": "npm run lint && npm run preversion && tape -r babel-register tests.js",
     "lint": "eslint src",
     "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body",
     "lint-tests": "eslint tests.js --fix"
