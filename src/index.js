@@ -1,14 +1,6 @@
 const tarot = require('corpora/data/divination/tarot_interpretations.json'),
   shuffle = require('knuth-shuffle').knuthShuffle;
 
-function uniquePluck(arr, prop) {
-  var types = {};
-
-  arr.forEach( (element) => {types[element[prop]] = true;} );
-
-  return Object.keys(types);
-};
-
 function getMajorArcana() {
   return getBySuit('major');
 };
@@ -23,7 +15,7 @@ function getMinorArcana() {
 };
 
 function getSuits() {
-  return uniquePluck(tarotDeck, 'suit');
+  return [...new Set(tarotDeck.map( (value) => value.suit ))];
 };
 
 export const tarotDeck = tarot.tarot_interpretations;
