@@ -9,7 +9,8 @@
     "clean": "rimraf dist",
     "test": "npm run lint && npm run preversion && node tests.js",
     "lint": "eslint src",
-    "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+    "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body",
+    "lint-tests": "eslint tests.js --fix"
   },
   "dependencies": {
     "babel-runtime": "^6.6.1",
