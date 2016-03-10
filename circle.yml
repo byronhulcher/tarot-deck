@@ -6,6 +6,7 @@ dependencies:
     - rm -rf node_modules
     - npm install -g istanbul
     - npm install -g codeclimate-test-reporter
+test:
   post:
     - istanbul cover tests.js
     - codeclimate-test-reporter < ./coverage/lcov.info
