@@ -4,7 +4,7 @@ machine:
 dependencies:
   pre:
     - rm -rf node_modules
-    - npm install -g istanbul
+    - npm install -g istanbul@1.0.0-alpha.2
     - npm install -g codeclimate-test-reporter
 test:
   post:
