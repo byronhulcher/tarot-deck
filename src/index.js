@@ -1,5 +1,5 @@
 const tarot = require('corpora/data/divination/tarot_interpretations.json'),
-  array = require('array-range');
+  shuffle = require('knuth-shuffle').knuthShuffle;
 
 function uniquePluck(arr, prop) {
   var types = {};
@@ -51,12 +51,5 @@ export function drawCard(deck = tarotDeck) {
 };
 
 export function drawReading(numberOfCards = 3, originalDeck = tarotDeck) {
-  const deck = originalDeck.slice();
-
-  return array(Math.min(numberOfCards, deck.length)).map( () => {
-    let card = drawCard(deck);
-
-    deck.splice(deck.indexOf(card), 1);
-    return card;
-  });
+  return shuffle(originalDeck.slice(0).slice(0,numberOfCards));
 }

@@ -7,14 +7,14 @@
     "preversion": "npm run clean && npm run build",
     "build": "babel src --out-dir dist --source-maps inline",
     "clean": "rimraf dist",
-    "test": "npm run preversion && npm run lint && node tests.js",
+    "test": "npm run lint && npm run preversion && node tests.js",
     "lint": "eslint src",
     "changelog": "github-changes -o byronhulcher -r tarot-deck -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
-    "array-range": "^1.0.1",
     "babel-runtime": "^6.6.1",
-    "corpora": "https://github.com/dariusk/corpora/archive/master.tar.gz"
+    "corpora": "https://github.com/dariusk/corpora/archive/master.tar.gz",
+    "knuth-shuffle": "^1.0.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -46,8 +46,8 @@
   ],
   "author": "byronhulcher",
   "license": "ISC",
-  "repository" :
-    { "type" : "git", 
-      "url" : "https://github.com/byronhulcher/tarot-deck.git"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byronhulcher/tarot-deck.git"
+  }
 }
