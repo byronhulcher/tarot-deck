@@ -1,8 +1,7 @@
-# [tarot-deck](https://github.com/byronhulcher/tarot-deck)
+# [tarot-deck](https://github.com/byronhulcher/tarot-deck) [![npm version](https://badge.fury.io/js/tarot-deck.svg)](https://badge.fury.io/js/tarot-deck)
 Tarot for Node! A thin javascript wrapper for the Tarot Interpretations from github.com/dariusk/corpora
 
-[![npm version](https://badge.fury.io/js/tarot-deck.svg)](https://badge.fury.io/js/tarot-deck)
-[![Circle CI](https://circleci.com/gh/byronhulcher/tarot-deck/tree/master.svg?style=svg)](https://circleci.com/gh/byronhulcher/tarot-deck/tree/master)
+[![Circle CI](https://circleci.com/gh/byronhulcher/tarot-deck/tree/master.svg?style=shield)](https://circleci.com/gh/byronhulcher/tarot-deck/tree/master)
 [![Code Climate](https://codeclimate.com/github/byronhulcher/tarot-deck/badges/gpa.svg)](https://codeclimate.com/github/byronhulcher/tarot-deck)
 [![Test Coverage](https://codeclimate.com/github/byronhulcher/tarot-deck/badges/coverage.svg)](https://codeclimate.com/github/byronhulcher/tarot-deck/coverage)
 
