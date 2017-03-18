@@ -34,14 +34,20 @@ export const minorArcana = getMinorArcana();
 
 export const majorArcana = getMajorArcana();
 
-export function drawCard(deck = tarotDeck) {
-  if (deck.length <= 0) return;
-  let chosenCard = deck[Math.floor(Math.random() * deck.length)];
+export function drawCard({reversedChance = 0.5, deck = tarotDeck} = {}) {
+  let chosenCard;
 
-  chosenCard.reversed = Math.random() < 0.5;
+  if (deck.length <= 0) return;
+  chosenCard = deck[Math.floor(Math.random() * deck.length)];
+  chosenCard.reversed = Math.random() < reversedChance;
   return chosenCard;
 };
 
-export function drawReading(numberOfCards = 3, originalDeck = tarotDeck) {
-  return shuffle(originalDeck.slice(0).slice(0,numberOfCards));
+export function drawReading(numberOfCards = 3, {reversedChance = 0.5, deck = tarotDeck} = {}) {
+  let reading = shuffle(deck.slice(0).slice(0,numberOfCards));
+
+  return reading.map( function (card) {
+    card.reversed = Math.random() < reversedChance;
+    return card;
+  });
 }
