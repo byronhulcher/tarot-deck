@@ -113,11 +113,13 @@ Function that returns an array of objects representing tarot cards which match t
 ### function getByRank( integer or string )
 Function that returns a single object representing a tarot card which matches the provided rank.  The rank should be an integer or evaluate to an integer.  See above for an example of the fields this will contain.
 
-### function drawCard( array deck = tarotDeck )
+### function drawCard( { float reversedChance = 0.5, array deck = tarotDeck } )
 Will choose a random card from the the provided array of tarot cards.  If the `deck` argument is not provided then it will default to the the exported `tarotDeck`.
 This will also add a `reversed` field to the object, which is a boolean of whether the card was drawn reversed or not.
+The default odds for a reversed draw is 50%, but a `reversedChance` argument can be provided.
 
-### function drawReading( integter numberOfCards = 3, array deck = tarotDeck)
+### function drawReading( integter numberOfCards = 3, { float reversedChance = 0.5, array deck = tarotDeck } )
 Will draw up to `numberOfCards` from the the supplied `deck` argument and return them as an array.  If the `deck` argument is not provided then it will default to the the exported `tarotDeck`.
-These cards are not replaced in the deck after they are drawn, so all cards are guarunteed unique.  They will also include the `reversed` field.
+These cards are not replaced in the deck after they are drawn, so all cards are guarunteed unique.
+They will also include the `reversed` field.  The default odd for a reversed draw is 50%, but a `reversedChance` argument can be provided.
 The provided `deck` argument or its default are NOT modified in any way. Cards returned from this function will still exist in the `deck`.
